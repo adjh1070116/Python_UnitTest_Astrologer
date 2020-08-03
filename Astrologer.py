@@ -22,8 +22,67 @@ def get_constellation(month, day) -> str:
     水瓶座	1月22日～2月19日
     雙魚座	2月20日～3月20日
     """
-    
-    return "一個星座"
+    if month==1:
+        if day<=21:
+            anwser="魔羯座"
+        else:
+            anwser="水瓶座"
+    if month==2:
+        if day<=19:
+            anwser="水瓶座"
+        else:
+            anwser="雙魚座"
+    if month==3:
+        if day<=20:
+            anwser="雙魚座"
+        else:
+            anwser="牡羊座"
+    if month==4:
+        if day<=20:
+            anwser="牡羊座"
+        else:
+            anwser="金牛座"
+    if month==5:
+        if day<=20:
+            anwser="金牛座"
+        else:
+            anwser="雙子座"
+    if month==6:
+        if day<=20:
+            anwser="雙子座"
+        else:
+            anwser="巨蟹座"
+    if month==7:
+        if day<=22:
+            anwser="巨蟹座"
+        else:
+            anwser="獅子座"
+    if month==8:
+        if day<=22:
+            anwser="獅子座"
+        else:
+            anwser="處女座"
+    if month==9:
+        if day<=22:
+            anwser="處女座"
+        else:
+            anwser="天秤座"
+    if month==10:
+        if day<=22:
+            anwser="天秤座"
+        else:
+            anwser="天蠍座"
+    if month==11:
+        if day<=22:
+            anwser="天蠍座"
+        else:
+            anwser="射手座"
+    if month==12:
+        if day<=22:
+            anwser="射手座"
+        else:
+            anwser="魔羯座"
+    return anwser
 
 
 def get_each_number(number: int) -> []:
@@ -32,8 +91,10 @@ def get_each_number(number: int) -> []:
     ex get_each_number(1920) 
     return [1,9,2,0]
     """
-
-    result = [1,2,3]
+    string=str(number)
+    result=[]
+    for i in range(len(string)):
+        result.append(int(string[i]))
 
     return result
 
